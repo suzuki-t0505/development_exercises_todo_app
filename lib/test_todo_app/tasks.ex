@@ -23,7 +23,7 @@ defmodule TestTodoApp.Tasks do
     |> Repo.all()
   end
 
-  def search_task(user_id, search) do
+  def search_tasks(user_id, search) do
     search = "%#{search}%"
 
     Task

@@ -5,7 +5,7 @@ defmodule TestTodoAppWeb.TaskController do
   alias TestTodoApp.Tasks.Task
 
   def index(conn, %{"search" => search}) do
-    tasks = Tasks.search_task(conn.assigns.current_user.id, search)
+    tasks = Tasks.search_tasks(conn.assigns.current_user.id, search)
     render(conn, :index, tasks: tasks, search_text: search)
   end
 
