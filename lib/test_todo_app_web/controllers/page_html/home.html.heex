@@ -1,0 +1,6 @@
+<.flash_group flash={@flash} />
+<%= if @current_user do %>
+  <.link href={~p"/tasks"} class="text-blue-600 underline">List tasks</.link>
+<% else %>
+  <p>Please login</p>
+<% end %>
